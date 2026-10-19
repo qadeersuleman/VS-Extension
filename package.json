@@ -1,0 +1,53 @@
+{
+  "name": "noor-islamic-companion",
+  "displayName": "Noor — Islamic Companion",
+  "description": "Quran ayat, Asma-ul-Husna, daily azkar, and a personal naat audio playlist inside VS Code.",
+  "version": "0.1.0",
+  "publisher": "your-name",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onView:noor.sidebar"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "noor",
+          "title": "Noor",
+          "icon": "media/noor.svg"
+        }
+      ]
+    },
+    "views": {
+      "noor": [
+        {
+          "type": "webview",
+          "id": "noor.sidebar",
+          "name": "Islamic Companion"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "noor.addLocalAudio",
+        "title": "Noor: Add Local MP3"
+      },
+      {
+        "command": "noor.openSidebar",
+        "title": "Noor: Open Islamic Companion"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "20.x",
+    "typescript": "^5.4.0",
+    "@vscode/vsce": "^2.26.0"
+  }
+}
