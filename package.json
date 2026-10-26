@@ -1,9 +1,20 @@
 {
-  "name": "noor-islamic-companion",
-  "displayName": "Noor — Islamic Companion",
-  "description": "Quran ayat, Asma-ul-Husna, daily azkar, and a personal naat audio playlist inside VS Code.",
-  "version": "0.1.0",
-  "publisher": "your-name",
+  "name": "qadeer-companion",
+  "displayName": "Qadeer — Islamic Companion",
+  "description": "Personalized Islamic companion and productivity workspace for Qadeer: Quran ayat, Asma-ul-Husna, daily azkar, Naats, Songs, and Reminders.",
+  "version": "1.0.0",
+  "publisher": "qadeer",
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "keywords": [
+    "islamic",
+    "quran",
+    "asma-ul-husna",
+    "naats",
+    "reminders",
+    "azkar",
+    "productivity"
+  ],
   "engines": { "vscode": "^1.85.0" },
   "categories": ["Other"],
   "activationEvents": ["onView:noor.sidebar"],
@@ -12,8 +23,8 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "noor",
-          "title": "Noor",
+          "id": "qadeer",
+          "title": "Qadeer",
           "icon": "media/noor.svg"
         }
       ]
@@ -23,18 +34,14 @@
         {
           "type": "webview",
           "id": "noor.sidebar",
-          "name": "Islamic Companion"
+          "name": "Qadeer Companion"
         }
       ]
     },
     "commands": [
       {
-        "command": "noor.addLocalAudio",
-        "title": "Noor: Add Local MP3"
-      },
-      {
         "command": "noor.openSidebar",
-        "title": "Noor: Open Islamic Companion"
+        "title": "Qadeer: Open Islamic Companion"
       }
     ]
   },
